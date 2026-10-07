@@ -1,0 +1,22 @@
+{
+  "name": "voice-agent-showcase",
+  "version": "1.0.0",
+  "description": "Voice-Agent für Tanzschule Muster — Telefon (Asterisk AudioSocket) + Browser-Test-UI über die Gemini Live API, Extraktion + Termin-Mail",
+  "type": "module",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js --demo",
+    "demo": "node server/index.js --demo",
+    "dashboard:bauen": "node dashboard/bauen.js",
+    "dashboard": "node dashboard/server.js",
+    "test": "node --test \"pruef/*.test.mjs\""
+  },
+  "dependencies": {
+    "@google/genai": "^1.9.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "nodemailer": "^9.0.3",
+    "ws": "^8.18.0"
+  }
+}

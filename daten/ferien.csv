@@ -1,0 +1,32 @@
+﻿# UNTERRICHTSFREIE TAGE -- Schulferien und Feiertage (Bayern)
+# Alles, was hier steht, ist unterrichtsfrei. Die KI vereinbart an diesen
+# Tagen keine Schnupperstunde und weist im Gespraech aktiv darauf hin.
+#
+# Bearbeiten: in Excel oeffnen, Zeile anhaengen, als CSV (Semikolon)
+# speichern. Aenderungen wirken sofort, kein Neustart noetig.
+#
+# Spalten:
+#   name   Bezeichnung, die die KI am Telefon nennen darf ("wegen der
+#          Herbstferien..."). Bitte verstaendlich formulieren.
+#   von    erster freier Tag   (JJJJ-MM-TT)
+#   bis    letzter freier Tag  (JJJJ-MM-TT), EINSCHLIESSLICH
+#
+# Ein einzelner Feiertag: bei "von" und "bis" dasselbe Datum eintragen.
+#
+# ACHTUNG -- diese Liste reicht bis Sommer 2027. Danach MUSS sie verlaengert
+# werden, sonst bucht die KI Termine in geschlossene Wochen. Am besten
+# einmal im Sommer zusammen mit kurse.csv aktualisieren. Offizielle Quelle:
+# https://www.km.bayern.de/termine/ferien-und-feiertage
+name;von;bis
+Sommerferien;2026-08-03;2026-09-14
+Tag der Deutschen Einheit;2026-10-03;2026-10-03
+Herbstferien;2026-11-02;2026-11-06
+Buß- und Bettag;2026-11-18;2026-11-18
+Weihnachtsferien;2026-12-24;2027-01-08
+Faschingsferien;2027-02-08;2027-02-12
+Osterferien;2027-03-22;2027-04-02
+Tag der Arbeit;2027-05-01;2027-05-01
+Christi Himmelfahrt;2027-05-06;2027-05-06
+Pfingstmontag;2027-05-17;2027-05-17
+Pfingstferien;2027-05-18;2027-05-28
+Sommerferien;2027-08-02;2027-09-13

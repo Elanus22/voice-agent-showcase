@@ -1,0 +1,49 @@
+﻿# STUNDENPLAN Tanzschule Muster  --  Beispiel-Schuljahr
+# Diese Datei ist die EINZIGE Quelle fuer Kurszeiten. Die KI liest nur vor,
+# was hier steht, und erfindet nichts dazu.
+#
+# Bearbeiten: in Excel oeffnen, aendern, als CSV (Trennzeichen Semikolon)
+# speichern, zurueck auf den Server legen. Aenderungen wirken sofort -- der
+# Dienst muss nicht neu gestartet werden.
+#
+# WICHTIG: Nach einem Schuljahreswechsel zusaetzlich das Feld
+# stundenplan_gueltig_bis in einstellungen.csv hochsetzen. Sonst sagt die KI
+# "unser Plan wird gerade aktualisiert" und verbindet weiter, statt Zeiten
+# zu nennen.
+#
+# Spalten:
+#   tag            Montag | Dienstag | Mittwoch | Donnerstag | Freitag | Samstag
+#   von / bis      Uhrzeit HH:MM
+#   kurs           Name, so wie die KI ihn am Telefon sagen soll
+#   tanzarten      eine oder mehrere, mit Komma getrennt. Erlaubt sind nur:
+#                  Ballett, TFE, Jazz, Contemporary, Urban, HipHop
+#   alter_von      juengstes Alter (Nachkommastelle mit Komma: 7,5)
+#   alter_bis      aeltestes Alter -- LEER lassen heisst "nach oben offen"
+#   nur_erwachsene "ja" wenn reiner Erwachsenenkurs, sonst leer
+#   ausgebucht     "ja" wenn kein Platz frei ist. Die KI nennt dann zwar die
+#                  Zeiten, sagt aber klar, dass nur die Warteliste geht, und
+#                  nimmt Name + Rueckrufnummer auf.
+tag;von;bis;kurs;tanzarten;alter_von;alter_bis;nur_erwachsene;ausgebucht
+Montag;16:00;16:50;Ballett 2;Ballett;7;9;;ja
+Montag;17:00;17:45;Ballett 1;Ballett;6;7;;ja
+Montag;17:55;18:45;Ballett 3;Ballett;8;10;;
+Montag;19:45;20:45;Hip Hop;HipHop;18;;ja;
+Dienstag;16:00;17:00;Ballett 2;Ballett;9;11;;
+Dienstag;17:05;18:20;Ballett 3;Ballett;11;13;;
+Dienstag;18:25;19:55;Ballett 5 inkl. Spitze;Ballett;14;16;;
+Dienstag;20:00;21:30;Ballett Fortgeschritten inkl. Spitze;Ballett;16;;;
+Mittwoch;15:45;16:35;Ballett 2-3;Ballett;7,5;9;;
+Mittwoch;16:45;17:30;Tänzerische Früherziehung;TFE;5;6;;ja
+Donnerstag;14:30;15:15;Jazz Kids 1;Jazz;6;7;;
+Donnerstag;15:15;16:05;Jazz Kids 2;Jazz;7;9;;
+Donnerstag;16:15;17:05;Jazz Kids 3;Jazz;9;11;;
+Donnerstag;17:15;18:10;Contemporary / Jazz 4;Contemporary,Jazz;10;13;;
+Donnerstag;18:15;19:45;Ballett Fortgeschrittene Jugend (inkl. Spitze Anfänger);Ballett;15;18;;
+Donnerstag;19:45;20:45;Contemporary / Improvisation;Contemporary;18;;ja;ja
+Freitag;15:45;16:40;Urban Dance-Contemporary;Urban,Contemporary;13;16;;
+Freitag;16:45;17:40;"Contemporary 4, Jugend";Contemporary;14;17;;
+Freitag;17:45;18:40;Urban Dance-Contemporary;Urban,Contemporary;16;;;
+Freitag;18:45;19:45;"Contemporary 5, junge Erwachsene";Contemporary;18;;ja;
+Samstag;09:30;10:15;Tänzerische Früherziehung;TFE;5;6;;
+Samstag;10:30;11:15;Tänzerische Früherziehung;TFE;4;5;;
+Samstag;11:25;12:15;Hip Hop;HipHop;11;13;;

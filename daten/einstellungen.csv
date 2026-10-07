@@ -1,0 +1,22 @@
+﻿# EINSTELLUNGEN
+#
+# stundenplan_gueltig_bis
+#   Letzter Tag, an dem der Stundenplan in kurse.csv gilt (JJJJ-MM-TT).
+#   Ab dem Tag danach nennt die KI KEINE Kurszeiten mehr, sondern sagt, dass
+#   der Plan gerade aktualisiert wird, und verbindet weiter bzw. notiert
+#   einen Rueckruf.
+#
+#   Das ist Absicht: Ein veralteter Stundenplan klingt fuer den Anrufer
+#   vollkommen richtig -- er merkt den Fehler erst vor der verschlossenen
+#   Tuer. Lieber sagt die KI ehrlich "das kann ich gerade nicht nachsehen".
+#
+#   NACH JEDEM SCHULJAHRESWECHSEL: erst kurse.csv aktualisieren, DANN dieses
+#   Datum hochsetzen. Der aktuelle Plan ist der von 2026/2027; er laeuft mit
+#   dem Ende der Sommerferien 2027 aus.
+#
+# schuljahr
+#   Nur zur Anzeige im Log, damit auf einen Blick klar ist, welcher Plan
+#   gerade eingespielt ist.
+schluessel;wert
+stundenplan_gueltig_bis;2027-09-13
+schuljahr;2026/2027

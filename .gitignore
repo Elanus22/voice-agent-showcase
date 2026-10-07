@@ -1,0 +1,39 @@
+# Echte Zugangsdaten. Bewusst NICHT im Repo, auch nicht in einem privaten:
+# Hier liegen der Produktiv-API-Key auf der Abrechnung der Kundin und das
+# Passwort ihres Postfachs. Ein Commit ist nicht rückholbar — ein privates
+# Repo kann später geteilt, übergeben oder offengelegt werden.
+# Vorlage ohne Geheimnisse: .env.example (die IST getrackt).
+.env
+
+# Gesprächsnotizen inkl. Volltranskript (personenbezogen, Löschfrist 30 Tage).
+outbox/
+
+# Betriebsprotokoll der Anrufe und die daraus erzeugte Dashboard-Seite. Kein
+# Personenbezug (siehe server/anrufLog.js) — aber Betriebsdaten der Kundin und
+# jederzeit neu erzeugbar, gehört also nicht in die Historie.
+protokoll/
+dashboard/ausgabe/
+
+# Abhängigkeiten. package-lock.json ist getrackt (lockfileVersion 3, jedes
+# Paket mit resolved + integrity) — "npm ci" stellt exakt denselben Baum wieder
+# her. Der Ordner selbst war bis 08.08.2026 eingecheckt und stellte 1.450 der
+# 1.485 Dateien im Repo; jedes "npm install" erzeugte damit Diff-Lärm, in dem
+# echte Änderungen untergehen.
+node_modules/
+
+# Sperrdateien, die Word beim Öffnen eines Dokuments anlegt.
+~$*
+
+# Generierte Ordner der Sicherheits-Scans. Der lesbare Bericht daraus liegt als
+# NACHPRUEFUNG.md im Repo, das Maschinenformat (.jsonl, Revisionsdatei) bleibt
+# lokal. Der Ordner bringt zwar eine eigene .gitignore mit — die ist aber selbst
+# generiert, also hier noch einmal ausdrücklich.
+CLAUDE-SECURITY-*/
+
+# Audio aus den Prüfskripten (pruef/klang.mjs, pruef/anruf.mjs) — jederzeit
+# neu erzeugbar und binär, gehört nicht in die Historie.
+pruef/audio/
+
+# Selbst aufgenommene Testanrufe (siehe pruef/TESTANRUFE.md). Binär, groß, und
+# es ist eine echte Stimme drauf — bleibt lokal.
+pruef/anrufe/

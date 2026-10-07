@@ -1,0 +1,12 @@
+# Alles, was auf dem Linux-VPS ausgefuehrt oder gelesen wird, behaelt LF --
+# auch in der Windows-Arbeitskopie. Hier steht core.autocrlf=true; ohne diese
+# Datei bekaeme deploy/wg-reresolve-dns.sh beim naechsten Checkout CRLF, und
+# ein per scp hochgeladenes Skript stirbt dann mit "bad interpreter: No such
+# file or directory". Die Zeile ist also kein Kosmetikeintrag.
+*.sh            text eol=lf
+*.conf          text eol=lf
+*.service       text eol=lf
+*.timer         text eol=lf
+
+# Die CSVs pflegt die Kundin in Excel unter Windows -- die bleiben CRLF.
+daten/*.csv     text eol=crlf
