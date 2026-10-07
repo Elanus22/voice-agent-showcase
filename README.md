@@ -9,8 +9,7 @@ und als Notiz ans Büro geschickt.
 **Anonymisiert:** Name, Adresse, Rufnummern, Postfächer und Team der
 Tanzschule sind durch Platzhalter ersetzt, der Stundenplan ist verfremdet.
 Betriebsinfrastruktur (Telefonanlage, VPN, Server-Deployment) und interne
-Projektdokumente sind nicht enthalten. Die Codebasis entspricht sonst dem
-produktiven Stand.
+Projektdokumente sind nicht enthalten.
 
 ## Architektur
 
